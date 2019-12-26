@@ -5,8 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Usuario_id_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     nome: {
       type: DataTypes.STRING,

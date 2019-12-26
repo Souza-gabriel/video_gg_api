@@ -5,13 +5,12 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Video_id_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     id_repositorio: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Video_id_repositorio_seq"::regclass)',
       primaryKey: true
     },
     sc_duracao: {
@@ -25,15 +24,15 @@ module.exports = function(sequelize, DataTypes) {
     id_usu_post: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Video_id_usu_post_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: 'id_usu_post'
     },
     xp_preco: {
       type: DataTypes.BIGINT,
       allowNull: true
     },
     dt_publicacao: {
-      type: DataTypes.TIME,
+      type: DataTypes.STRING,
       allowNull: false
     },
     classificacao_idade: {

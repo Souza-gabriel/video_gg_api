@@ -5,26 +5,25 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Compra_xp_id_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     id_pacote: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Compra_xp_id_pacote_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: 'id_pacote'
     },
     id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Compra_xp_id_usuario_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: "id_usuario"
     },
     id_sis_comp: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Compra_xp_id_sis_comp_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
     },
     dt_compra: {
       type: DataTypes.TIME,

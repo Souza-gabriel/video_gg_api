@@ -7,7 +7,7 @@ module.exports = app => {
       .catch(error => error.status(412).json({msg: error.message}));
   });
 
-  //ADICIONA UM USUARIO NO BANCO - NÂO TESTADO AINDA
+  //ADICIONA UM USUARIO NO BANCO
   app.post("/user", (req, res) => {
     Usuario.create(req.body)
       .then(usuario => res.json(usuario))
@@ -21,14 +21,14 @@ module.exports = app => {
       .catch(error => error.status(412).json({msg: error.message}));
   });
 
-  //ATUALIZA UM USUARIO NO BANCO - NÃO TESTADO
+  //ATUALIZA UM USUARIO NO BANCO
   app.put("/user/:id", (req, res) => {
-    Usuario.update(req.body, {where: req.params})
+    Usuario.update(req.body, {where: {id: req.params.id}})
     .then(usuario => res.sendStatus(204))
     .catch(error => error.status(412).json({error: error.message}));
   });
 
-  //DELETA UM USUARIO DO BANCO - NÃO TESTADO
+  //DELETA UM USUARIO DO BANCO PELO ID
   app.delete("/user/:id", (req, res) => {
     Usuario.destroy({where: {id: req.params.id}})
       .then(usuario => res.sendStatus(204))

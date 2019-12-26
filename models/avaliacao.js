@@ -5,14 +5,14 @@ module.exports = function(sequelize, DataTypes) {
     id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Avaliacao_id_usuario_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: 'id_usuario'
     },
     id_video: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Avaliacao_id_video_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: 'id_video'
     },
     valor: {
       type: DataTypes.BOOLEAN,

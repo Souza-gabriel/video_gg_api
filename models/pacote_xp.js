@@ -5,8 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Pacote_xp_id_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     qtd_xp: {
       type: DataTypes.BIGINT,

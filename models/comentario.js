@@ -5,18 +5,18 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Comentario_id_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Comentario_id_usuario_seq"::regclass)'
+      field: 'id_usuario'
     },
     id_video: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Comentario_id_video_seq"::regclass)'
+      field: 'id_video'
     },
     conteudo: {
       type: DataTypes.STRING,

@@ -5,20 +5,20 @@ module.exports = function(sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Historico_id_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     },
     id_usuario: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Historico_id_usuario_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: 'id_usuario'
     },
     id_video: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 'nextval("Historico_id_video_seq"::regclass)',
-      primaryKey: true
+      primaryKey: true,
+      field: 'id_video'
     },
     dt_visualizacao: {
       type: DataTypes.TIME,
